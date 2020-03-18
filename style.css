@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+
 }
 
 body {
@@ -23,6 +24,7 @@ main {
         "footer";
     grid-template-rows: auto;
     grid-auto-flow: dense;
+
 }
 
 nav {
@@ -35,7 +37,8 @@ nav {
     height: 700px;
     grid-area: splash;
     background-color: #FAC177;
-
+    background-image: url(2320.jpg);
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
@@ -86,7 +89,10 @@ footer {
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(-250px);
-    transition: transform 1s;
+    transition: transform 1.2s;
+
+
+
 }
 
 .cube.show-front {
@@ -117,36 +123,36 @@ footer {
     position: absolute;
     width: 500px;
     height: 500px;
-    border: 2px solid black;
+    border: none;
     line-height: 500px;
     font-size: 40px;
     font-weight: bold;
-    color: white;
+    color: #FAC177;
     text-align: center;
 }
 
 .cube__face--front {
-    background: hsla(0, 100%, 50%, 0.7);
+    background: hsl(216, 87%, 27%);
 }
 
 .cube__face--right {
-    background: hsla(60, 100%, 50%, 0.7);
+    background: hsl(216, 87%, 27%);
 }
 
 .cube__face--back {
-    background: hsla(120, 100%, 50%, 0.7);
+    background: hsl(216, 87%, 27%);
 }
 
 .cube__face--left {
-    background: hsla(180, 100%, 50%, 0.7);
+    background: hsl(216, 87%, 27%);
 }
 
 .cube__face--top {
-    background: hsla(240, 100%, 50%, 0.7);
+    background: hsl(216, 87%, 27%);
 }
 
 .cube__face--bottom {
-    background: hsla(300, 100%, 50%, 0.7);
+    background: hsl(216, 87%, 27%);
 }
 
 .cube__face--front {
@@ -181,6 +187,7 @@ footer {
 
 .cube_container label {
     margin: 0 15px;
+    margin-top: 5vw;
 }
 
 /*--------- CUBE STYLE ---------*/
