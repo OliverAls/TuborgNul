@@ -37,6 +37,9 @@ nav {
     height: 80vh;
     grid-area: splash;
     background-color: #FAC177;
+
+    display: flex;
+    justify-content: center;
 }
 
 #sec2 {
@@ -69,53 +72,54 @@ footer {
 
 
 /*--------- CUBE STYLE ---------*/
+.cube_container {}
+
 .scene {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #CCC;
+    width: 500px;
+    height: 500px;
     margin: 80px;
-    perspective: 400px;
+    perspective: 1000px;
 }
 
 .cube {
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     position: relative;
     transform-style: preserve-3d;
-    transform: translateZ(-100px);
+    transform: translateZ(-250px);
     transition: transform 1s;
 }
 
 .cube.show-front {
-    transform: translateZ(-100px) rotateY(0deg);
+    transform: translateZ(-250px) rotateY(0deg);
 }
 
 .cube.show-right {
-    transform: translateZ(-100px) rotateY(-90deg);
+    transform: translateZ(-250px) rotateY(-90deg);
 }
 
 .cube.show-back {
-    transform: translateZ(-100px) rotateY(-180deg);
+    transform: translateZ(-250px) rotateY(-180deg);
 }
 
 .cube.show-left {
-    transform: translateZ(-100px) rotateY(90deg);
+    transform: translateZ(-250px) rotateY(90deg);
 }
 
 .cube.show-top {
-    transform: translateZ(-100px) rotateX(-90deg);
+    transform: translateZ(-250px) rotateX(-90deg);
 }
 
 .cube.show-bottom {
-    transform: translateZ(-100px) rotateX(90deg);
+    transform: translateZ(-250px) rotateX(90deg);
 }
 
 .cube__face {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     border: 2px solid black;
-    line-height: 200px;
+    line-height: 500px;
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -147,31 +151,37 @@ footer {
 }
 
 .cube__face--front {
-    transform: rotateY(0deg) translateZ(100px);
+    transform: rotateY(0deg) translateZ(250px);
 }
 
 .cube__face--right {
-    transform: rotateY(90deg) translateZ(100px);
+    transform: rotateY(90deg) translateZ(250px);
 }
 
 .cube__face--back {
-    transform: rotateY(180deg) translateZ(100px);
+    transform: rotateY(180deg) translateZ(250px);
 }
 
 .cube__face--left {
-    transform: rotateY(-90deg) translateZ(100px);
+    transform: rotateY(-90deg) translateZ(250px);
 }
 
 .cube__face--top {
-    transform: rotateX(90deg) translateZ(100px);
+    transform: rotateX(90deg) translateZ(250px);
 }
 
 .cube__face--bottom {
-    transform: rotateX(-90deg) translateZ(100px);
+    transform: rotateX(-90deg) translateZ(250px);
 }
 
-label {
-    margin-right: 10px;
+.cube_container .radio-group {
+    display: flex;
+    justify-content: center;
+
+}
+
+.cube_container label {
+    margin: 0 15px;
 }
 
 /*--------- CUBE STYLE ---------*/
