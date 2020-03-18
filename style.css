@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+
+main {
+    width: 100vw;
+    height: 2000px;
+
+    display: grid;
+    /*    grid-gap: 10px;*/
+    grid-template-areas:
+        "header header header"
+        "splash splash splash"
+        "sec2 sec2 sec2"
+        "sec3 sec3 sec3"
+        "sec4 sec4 sec4"
+        "footer footer footer";
+    grid-template-rows: auto;
+    grid-auto-flow: dense;
+}
+
+nav {
+    height: 80px;
+    grid-area: header;
+    background-color: #093A82;
+}
+
+#splash {
+    height: 80vh;
+    grid-area: splash;
+    background-color: #FAC177;
+}
+
+#sec2 {
+    height: 80vh;
+    grid-area: sec2;
+    background-color: #BEE0D9;
+}
+
+#sec3 {
+    height: 80vh;
+    grid-area: sec3;
+    background-color: #FAC177;
+}
+
+#sec4 {
+    height: 80vh;
+    grid-area: sec4;
+    background-color: #093A82;
+}
+
+footer {
+    height: 80px;
+    grid-area: footer;
+    background-color: #9C9E9F;
+}
+
+
+
+
+
+/*
+--------- TUBORG NUL COLORS ---------
+BLÅ = #093A82
+PASTELGRØN = #BEE0D9
+ORANGE = #FAC177
+GRÅ = #9C9E9F
+--------- TUBORG NUL COLORS SLUT ---------
+*/
