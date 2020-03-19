@@ -10,6 +10,7 @@ GRÅ = #9C9E9F
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 
 }
 
@@ -34,7 +35,6 @@ main {
         "footer";
     grid-template-rows: 1fr;
     grid-auto-flow: dense;
-
 }
 
 nav {
