@@ -15,17 +15,16 @@ GRÅ = #9C9E9F
 
 body {
     margin: 0;
-    font-family: sans-serif;
-    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
-
-
+img {
+    width: 100%;
+}
 
 main {
     width: 100vw;
     display: grid;
-    /*    grid-gap: 10px;*/
     grid-template-areas:
         "header"
         "splash"
@@ -42,41 +41,213 @@ nav {
     height: 80px;
     grid-area: header;
     background-color: #093A82;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
+nav a {
+    color: #fff;
+    font-family: tuborg;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: .3s;
+}
+
+@font-face {
+    font-family: 'tuborg';
+    src: url('fonts/tuborgdk.woff') format('woff');
+    src: url('fonts/tuborgserif-extrabold.woff2') format('woff2');
+}
+
+
+nav .logo {
+    position: absolute;
+    left: 0;
+    font-family: tuborg;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+}
+
+nav a:hover {
+    color: #FAC177;
+}
+
+
+
+
+
+
+
+/*---------- SPLASH SECTION ----------*/
 #splash {
     height: 80vh;
-    grid-area: splash;    
-    background-image: url(splash.jpg);
+    grid-area: splash;
+    background-image: url(images/splash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 60%;
-
     width: 100vw;
 }
 
-#sec2 {
-    height: 700px;
+.splash_beskrivelse {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    left: 16vw;
+    top: 20vh;
+    color: #fff;
+    text-align: center;
+}
+
+.splash_beskrivelse h2 {
+    margin: 20px 0 5px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.splash_beskrivelse p {
+    margin-top: 5px;
+    padding: 0 50px;
+    text-shadow: 2px 1px 8px black;
+}
+
+.nul_splash {
+    height: 80%;
+}
+
+/*---------- SPLASH SECTION ----------*/
+
+
+
+
+
+/*---------- NUL SECTION ----------*/
+#nul {
+    height: 100vh;
+    width: 100vw;
     grid-area: sec2;
     background-color: #FAC177;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
 }
 
-#sec3 {
-    height: 700px;
+#nul .col,
+#smagen .col,
+#idk .col {
+    justify-self: center;
+    align-self: center;
+    max-width: 700px;
+    padding: 30px 20px 50px 20px;
+}
+
+#nul .col h1,
+#smagen .col h1,
+#idk .col h1 {
+    font-family: tuborg;
+    font-size: 2rem;
+    color: #093A82;
+    margin-top: 0;
+}
+
+/*---------- NUL SECTION ----------*/
+
+
+
+
+
+/*---------- SMAGEN SECTION ----------*/
+#smagen {
+    height: 100vh;
+    width: 100vw;
     grid-area: sec3;
-    background-color: #BEE0D9;   
+    background-color: #BEE0D9;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
 }
 
-#sec4 {
-    height: 700px;
+
+/*---------- SMAGEN SECTION ----------*/
+
+
+
+
+
+
+
+
+/*---------- IDK SECTION ----------*/
+#idk {
+    height: 100vh;
+    width: 100vw;
     grid-area: sec4;
     background-color: #FAC177;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
 }
 
 
+/*---------- IDK SECTION ----------*/
+
+
+
+
+
+
+
+/*---------- FOOTER SECTION ----------*/
 footer {
     width: 100vw;
     height: 80px;
     grid-area: footer;
     background-color: #9C9E9F;
+
+    text-align: center;
+}
+
+
+/*---------- FOOTER SECTION ----------*/
+
+
+
+
+
+
+
+/*---------- MEDIA QUERIES ----------*/
+@media screen and (max-width: 700px) {
+    .splash_beskrivelse {
+        margin: 0 auto;
+        height: 420px;
+        width: 420px;
+        left: 0;
+        top: 10vh;
+        position: relative;
+    }
+
+
+    #nul,
+    #smagen,
+    #idk {
+        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+
+    #nul .col,
+    #smagen .col,
+    #idk .col {
+        max-width: 90vw;
+        padding: 30px 30px 50px 30px;
+    }
+
+
 }
