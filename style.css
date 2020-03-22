@@ -23,6 +23,11 @@ img {
     width: 100%;
 }
 
+p,
+a {
+    font-size: 1rem;
+}
+
 main {
     width: 100vw;
     display: grid;
@@ -86,7 +91,7 @@ nav a:hover {
 
 /*---------- SPLASH SECTION ----------*/
 #splash {
-    height: 80vh;
+    height: 92vh;
     grid-area: splash;
     background-image: url(images/splash.jpg);
     background-repeat: no-repeat;
@@ -100,7 +105,7 @@ nav a:hover {
     width: 500px;
     position: absolute;
     left: 16vw;
-    top: 20vh;
+    top: 26vh;
     color: #fff;
     text-align: center;
 }
@@ -151,10 +156,57 @@ nav a:hover {
 #smagen .col h1,
 #idk .col h1 {
     font-family: tuborg;
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: #093A82;
     margin-top: 0;
+    margin-bottom: 10px;
 }
+
+
+#barchart {
+    max-width: 600px;
+    height: 320px;
+}
+
+/*
+#chart {
+    width: 100%;
+    height: 100%;
+}*/
+#chart line {
+    stroke: #555;
+    stroke-width: .75;
+}
+
+#chart text {
+    font-size: 6px;
+    font-weight: 700;
+}
+
+#bars line {
+    stroke-width: 20;
+    stroke: #093A82;
+    transition: .3s;
+}
+
+#bars line:hover {
+    stroke: #0a4db2;
+}
+
+.col:last-child p {
+    position: absolute;
+    background-color: #9C9E9F;
+    color: white;
+    padding: .3rem;
+    margin: 0;
+    display: none;
+
+}
+
+.hide {
+    display: none;
+}
+
 
 /*---------- NUL SECTION ----------*/
 
@@ -222,6 +274,95 @@ footer {
 
 
 
+
+
+
+
+.show_graph {
+    animation-name: show_graph_kf;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes show_graph_kf {
+    0% {
+        opacity: 0%;
+    }
+
+    100%;
+
+        {
+        opacity: 100%;
+    }
+}
+
+.show_text {
+    animation-name: show_text_kf;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes show_text_kf {
+    0% {
+        opacity: 0%;
+    }
+
+    100%;
+
+        {
+        opacity: 100%;
+    }
+}
+
+.show_pillars {
+    animation-name: show_pillars_kf;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: .6s;
+}
+
+@keyframes show_pillars_kf {
+    0% {
+        opacity: 0%;
+        transform: translateY(10px);
+        height: 0;
+        filter: blur(100px);
+        stroke-width: 0;
+    }
+
+    50% {
+        filter: blur(100px);
+        stroke-width: 0;
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+        filter: blur(0);
+        stroke-width: 20;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*---------- MEDIA QUERIES ----------*/
 @media screen and (max-width: 700px) {
     .splash_beskrivelse {
@@ -247,6 +388,15 @@ footer {
     #idk .col {
         max-width: 90vw;
         padding: 30px 30px 50px 30px;
+    }
+
+
+    #smagen .col:first-child {
+        order: 2;
+    }
+
+    #smagen .col:last-child {
+        order: 1;
     }
 
 
