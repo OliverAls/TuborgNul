@@ -10,6 +10,24 @@ document.querySelectorAll("#bars line").forEach((bar, i) => {
     bar.addEventListener("mouseout", skjul);
 });
 
+document.querySelector("#menuknap").addEventListener("click", toggleMenu);
+document.querySelector("ul").addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    document.querySelector("#menu").classList.toggle("hidden");
+
+
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
+
+    if (erSkjult == true) {
+        document.querySelector("#menuknap").textContent = "☰";
+    } else {
+        document.querySelector("#menuknap").textContent = "X";
+    }
+
+
+}
+
 
 for (let step = 0; step < 1; step++) {
     setInterval(function () {
@@ -22,7 +40,6 @@ for (let step = 0; step < 1; step++) {
             document.querySelector("#bars").classList.remove("hide");
         }
     }, 1000);
-
 }
 
 function vis(e) {

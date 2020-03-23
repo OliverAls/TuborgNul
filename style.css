@@ -79,6 +79,10 @@ nav .logo {
     font-size: 1.6rem;
 }
 
+nav .logo h1 {
+    margin: 0;
+}
+
 nav a:hover {
     color: #FAC177;
 }
@@ -364,6 +368,73 @@ footer {
 
 
 /*---------- MEDIA QUERIES ----------*/
+@media screen and (max-width: 800px) {
+    #desktop_menu {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #menu {
+        height: 175px;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        background-color: #093A82;
+        z-index: 10;
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    #menu ul {
+        padding: 0;
+        padding-top: 10px;
+    }
+
+    #menuknap {
+        width: 25px;
+        height: 25px;
+        color: #fff;
+        position: absolute;
+        right: 20px;
+        top: 23px;
+        font-size: 1.6rem;
+        margin: 0;
+        cursor: default;
+        z-index: 100;
+    }
+
+    .splash_beskrivelse {
+        z-index: 0;
+    }
+
+    .logo {
+        position: absolute;
+        left: 0;
+        font-family: tuborg;
+        letter-spacing: 2px;
+        font-size: 1.6rem;
+        top: 16px;
+    }
+
+
+    #burgermenu #menu_container .logo h1 {
+        margin: 0;
+    }
+
+    /*
+    #burgermenu #menu_container #menu {
+        display: none;
+    }
+*/
+}
+
+
+
+
 @media screen and (max-width: 700px) {
     .splash_beskrivelse {
         margin: 0 auto;
@@ -442,5 +513,33 @@ footer {
     #idk .col h1 {
         font-size: 2.5rem;
 
+    }
+
+    nav .logo {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+    #desktop_menu {
+        height: 80px;
+        grid-area: header;
+        background-color: #093A82;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #burgermenu {
+        display: none;
+    }
+
+    #menu {
+        display: none;
     }
 }
