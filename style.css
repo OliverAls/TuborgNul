@@ -173,6 +173,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
 }*/
+
 #chart line {
     stroke: #555;
     stroke-width: .75;
@@ -193,7 +194,7 @@ nav a:hover {
     stroke: #0a4db2;
 }
 
-.col:last-child p {
+#nul .col:last-child p {
     position: absolute;
     background-color: #9C9E9F;
     color: white;
@@ -280,7 +281,7 @@ footer {
 
 .show_graph {
     animation-name: show_graph_kf;
-    animation-duration: 2s;
+    animation-duration: 1.4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
 }
@@ -321,7 +322,6 @@ footer {
     animation-duration: .7s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
-    animation-delay: .6s;
 }
 
 @keyframes show_pillars_kf {
@@ -374,7 +374,6 @@ footer {
         position: relative;
     }
 
-
     #nul,
     #smagen,
     #idk {
@@ -382,12 +381,26 @@ footer {
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
 
-
     #nul .col,
     #smagen .col,
     #idk .col {
         max-width: 90vw;
         padding: 30px 30px 50px 30px;
+    }
+
+    #nul .col:first-child {
+        padding: 30px 30px 10px 30px;
+    }
+
+    #barchart {
+        max-width: 420px;
+        height: 250px;
+        padding-right: 70px;
+    }
+
+    #chart text {
+        font-size: 8px;
+        font-weight: 700;
     }
 
 
@@ -400,4 +413,34 @@ footer {
     }
 
 
+}
+
+
+@media screen and (max-width: 400px) {
+    .splash_beskrivelse {
+        margin: 0 auto;
+        height: 320px;
+        width: 320px;
+        left: 0;
+        top: 20vh;
+        position: relative;
+    }
+
+    #barchart {
+        max-width: 320px;
+        height: 160px;
+        padding-right: 100px;
+    }
+
+    #chart text {
+        font-size: 8px;
+        font-weight: 700;
+    }
+
+    #nul .col h1,
+    #smagen .col h1,
+    #idk .col h1 {
+        font-size: 2.5rem;
+
+    }
 }

@@ -8,19 +8,22 @@ document.querySelectorAll("#bars line").forEach((bar, i) => {
     bar.setAttribute("data-procent", values[i] / total * 100);
     bar.addEventListener("mouseover", e => vis(e));
     bar.addEventListener("mouseout", skjul);
-
-
-    if (bar.getAttribute("data-value") > 0) {
-        console.log("idk");
-    }
 });
 
-document.querySelector("#barchart").classList.add("show_graph");
 
-document.querySelector("#bars").classList.add("show_pillars");
-setTimeout(function () {
-    document.querySelector("#bars").classList.remove("hide")
-}, 700);
+for (let step = 0; step < 1; step++) {
+    setInterval(function () {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 575) {
+            console.log("show_graph");
+            document.querySelector("#barchart").classList.remove("hide");
+            document.querySelector("#barchart").classList.add("show_graph");
+            document.querySelector("#bars").classList.add("show_pillars");
+            document.querySelector("#bars").classList.remove("hide");
+        }
+    }, 1000);
+
+}
 
 function vis(e) {
     console.log(e.target);
@@ -43,7 +46,6 @@ function vis(e) {
     window.addEventListener("mousemove", followMouse);
 
     if (talString.length < 7) {
-        console.log("wyf");
         let belowMillion = [talString.slice(0, pos3), punktum, talString.slice(pos3)].join('');
         output.textContent = belowMillion + " liter";
     }
