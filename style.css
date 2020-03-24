@@ -105,11 +105,11 @@ nav a:hover {
 }
 
 .splash_beskrivelse {
-    height: 500px;
-    width: 500px;
+    height: 420px;
+    width: 420px;
     position: absolute;
     left: 16vw;
-    top: 26vh;
+    top: 25vh;
     color: #fff;
     text-align: center;
 }
@@ -171,12 +171,6 @@ nav a:hover {
     max-width: 600px;
     height: 320px;
 }
-
-/*
-#chart {
-    width: 100%;
-    height: 100%;
-}*/
 
 #chart line {
     stroke: #555;
@@ -265,9 +259,12 @@ footer {
     width: 100vw;
     height: 80px;
     grid-area: footer;
-    background-color: #9C9E9F;
+    background-color: #093A82;
 
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
 
@@ -283,6 +280,159 @@ footer {
 
 
 
+/*---------- GAME SECTION ----------*/
+.can_container {
+    height: 70px;
+    width: 35px;
+
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.can_sprite {
+    height: 100%;
+    width: 100%;
+    background-image: url(images/game_sprite.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#play_button {
+    margin: 25px auto;
+    padding: .8rem;
+    background-color: #093A82;
+    width: 40%;
+    text-transform: uppercase;
+    transition: .3s;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#play_button:hover {
+    background-color: #0c49a3;
+    transform: scale(1.04);
+}
+
+.pos1 {
+    left: 170px;
+    top: 6px;
+}
+
+.pos2 {
+    margin-top: -10px;
+}
+
+.pos3 {
+    left: 420px;
+    top: 1206px;
+}
+
+.pos4 {
+    right: 130px;
+    top: 2306px;
+}
+
+.pos5 {
+    margin-top: -80px;
+    margin-left: 100px;
+}
+
+#win {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+
+    display: none;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#win .top {
+    margin: 0 auto;
+    width: 310px;
+    color: #fff;
+}
+
+#win .bottom {
+    margin: 0 auto;
+    width: 310px;
+    color: #fff;
+    display: flex;
+}
+
+#win .bottom input {
+    width: 70%;
+    height: 30px;
+    border: 0;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#win .bottom button {
+    width: 30%;
+    height: 30px;
+    border: 0;
+    font-size: 16px;
+    background-color: #093A82;
+    color: #fff;
+    transition: .3s;
+}
+
+#win .bottom button:hover {
+    background-color: #0c49a3;
+    transform: scale(1.08);
+}
+
+#win .bottom button:focus {
+    outline: 0;
+}
+
+#win h1 {
+    font-size: 2.25rem;
+    font-family: tuborg;
+    margin: 0;
+    text-align: center;
+}
+
+#win #close {
+    position: absolute;
+    top: 321px;
+    border: 0;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+    transition: .3s;
+}
+
+#win #close:hover {
+    transform: scale(1.16);
+}
+
+#win #close:focus {
+    outline: 0;
+}
+
+/*---------- GAME SECTION ----------*/
+
+
+
+
+
+
+
+
+
+
+
+/*---------- ANIMATION SECTION ----------*/
 .show_graph {
     animation-name: show_graph_kf;
     animation-duration: 1.4s;
@@ -352,6 +502,33 @@ footer {
 }
 
 
+.can_ani {
+    animation-name: can_ani_kf;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+}
+
+@keyframes can_ani_kf {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(.8);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/*---------- ANIMATION SECTION ----------*/
+
 
 
 
@@ -401,10 +578,15 @@ footer {
         position: absolute;
         right: 20px;
         top: 23px;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         margin: 0;
         cursor: default;
         z-index: 100;
+        text-align: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .splash_beskrivelse {
@@ -430,9 +612,12 @@ footer {
         display: none;
     }
 */
+
+    .pos4 {
+        top: 2326px;
+        right: 50px;
+    }
 }
-
-
 
 
 @media screen and (max-width: 700px) {
@@ -521,8 +706,6 @@ footer {
 }
 
 
-
-
 @media screen and (min-width: 800px) {
     #desktop_menu {
         height: 80px;
@@ -543,3 +726,5 @@ footer {
         display: none;
     }
 }
+
+/*---------- MEDIA QUERIES ----------*/
