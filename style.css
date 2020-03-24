@@ -135,9 +135,8 @@ nav a:hover {
 
 
 
-
-/*---------- NUL SECTION ----------*/
-#nul {
+/*---------- udvikling SECTION ----------*/
+#udvikling {
     height: 100vh;
     width: 100vw;
     grid-area: sec2;
@@ -145,25 +144,6 @@ nav a:hover {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
-}
-
-#nul .col,
-#smagen .col,
-#idk .col {
-    justify-self: center;
-    align-self: center;
-    max-width: 700px;
-    padding: 30px 20px 50px 20px;
-}
-
-#nul .col h1,
-#smagen .col h1,
-#idk .col h1 {
-    font-family: tuborg;
-    font-size: 3.5rem;
-    color: #093A82;
-    margin-top: 0;
-    margin-bottom: 10px;
 }
 
 
@@ -192,7 +172,7 @@ nav a:hover {
     stroke: #0a4db2;
 }
 
-#nul .col:last-child p {
+#udvikling .col:last-child p {
     position: absolute;
     background-color: #9C9E9F;
     color: white;
@@ -206,8 +186,12 @@ nav a:hover {
     display: none;
 }
 
+/*---------- udvikling SECTION ----------*/
 
-/*---------- NUL SECTION ----------*/
+
+
+
+
 
 
 
@@ -224,6 +208,22 @@ nav a:hover {
     grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
 }
 
+#smagen .col:first-child {
+    background-image: url(images/korn2.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    justify-self: stretch;
+    align-self: stretch;
+    max-width: 100%;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
 
 /*---------- SMAGEN SECTION ----------*/
 
@@ -234,8 +234,9 @@ nav a:hover {
 
 
 
-/*---------- IDK SECTION ----------*/
-#idk {
+
+/*---------- NUL SECTION ----------*/
+#nul {
     height: 100vh;
     width: 100vw;
     grid-area: sec4;
@@ -245,8 +246,66 @@ nav a:hover {
     grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
 }
 
+#nul .col,
+#smagen .col,
+#udvikling .col {
+    justify-self: center;
+    align-self: center;
+    max-width: 700px;
+    padding: 30px 20px 50px 20px;
+}
 
-/*---------- IDK SECTION ----------*/
+#nul .col h1,
+#smagen .col h1,
+#udvikling .col h1 {
+    font-family: tuborg;
+    font-size: 2.75rem;
+    color: #093A82;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+
+#nul .col:first-child {
+    background-image: url(images/sunset_beer.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    justify-self: stretch;
+    align-self: stretch;
+    max-width: 100%;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+#nul .col:first-child h1 {
+    color: #fff;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.41);
+}
+
+#nul .col:last-child {
+    background-image: url(images/smagen_facebook.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    justify-self: stretch;
+    align-self: stretch;
+    max-width: 100%;
+    padding: 0;
+    min-height: 50vh;
+}
+
+/*---------- NUL SECTION ----------
+
+
+
+
 
 
 
@@ -265,6 +324,21 @@ footer {
     justify-content: center;
     align-items: center;
     color: #fff;
+}
+
+footer a {
+    margin: 0 20px;
+    height: 40px;
+    width: 40px;
+    transition: .3s;
+}
+
+footer a:hover {
+    transform: scale(1.08);
+}
+
+footer a img {
+    height: 40px;
 }
 
 
@@ -325,18 +399,17 @@ footer {
 }
 
 .pos3 {
-    left: 420px;
-    top: 1206px;
+    left: 670px;
+    top: 1242px;
 }
 
 .pos4 {
-    right: 130px;
-    top: 2306px;
+    right: 120px;
+    top: 2326px;
 }
 
 .pos5 {
-    margin-top: -80px;
-    margin-left: 100px;
+    margin-top: 60px;
 }
 
 #win {
@@ -348,21 +421,21 @@ footer {
 
     display: none;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    align-items: center;
 }
 
 #win .top {
     margin: 0 auto;
     width: 310px;
-    color: #fff;
+    color: #000;
 }
 
 #win .bottom {
     margin: 0 auto;
     width: 310px;
-    color: #fff;
+    color: #000;
     display: flex;
+    padding-bottom: 10px;
 }
 
 #win .bottom input {
@@ -371,6 +444,12 @@ footer {
     border: 0;
     font-size: 16px;
     padding: 10px;
+    border: 2px solid black;
+    border-radius: 0;
+}
+
+#win .bottom input:focus {
+    outline: 0;
 }
 
 #win .bottom button {
@@ -400,8 +479,7 @@ footer {
 }
 
 #win #close {
-    position: absolute;
-    top: 321px;
+    position: relative;
     border: 0;
     height: 25px;
     width: 25px;
@@ -418,6 +496,18 @@ footer {
 
 #win #close:focus {
     outline: 0;
+}
+
+#win #background {
+    background-color: #fff;
+    width: auto;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: auto;
 }
 
 /*---------- GAME SECTION ----------*/
@@ -512,19 +602,18 @@ footer {
 
 @keyframes can_ani_kf {
     0% {
-        transform: scale(0);
-        opacity: 0;
+        transform: scale(0.6);
     }
 
     50% {
         transform: scale(.8);
-        opacity: 0.9;
     }
 
     100% {
-        transform: scale(0);
-        opacity: 0;
+        transform: scale(0.6);
+
     }
+
 }
 
 /*---------- ANIMATION SECTION ----------*/
@@ -617,6 +706,11 @@ footer {
         top: 2326px;
         right: 50px;
     }
+
+    .pos3 {
+        left: 620px;
+        top: 1002px;
+    }
 }
 
 
@@ -632,14 +726,14 @@ footer {
 
     #nul,
     #smagen,
-    #idk {
+    #udvikling {
         height: auto;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
 
     #nul .col,
     #smagen .col,
-    #idk .col {
+    #udvikling .col {
         max-width: 90vw;
         padding: 30px 30px 50px 30px;
     }
@@ -668,6 +762,10 @@ footer {
         order: 1;
     }
 
+    .pos3 {
+        left: 400px;
+        top: 1002px;
+    }
 
 }
 
@@ -695,13 +793,26 @@ footer {
 
     #nul .col h1,
     #smagen .col h1,
-    #idk .col h1 {
+    #udvikling .col h1 {
         font-size: 2.5rem;
 
     }
 
     nav .logo {
         font-size: 1.2rem;
+    }
+
+    #play_button {
+        width: 60%;
+    }
+
+    .logo h1 {
+        margin: 8px 0 !important;
+    }
+
+    .pos3 {
+        left: 300px;
+        top: 900px;
     }
 }
 
